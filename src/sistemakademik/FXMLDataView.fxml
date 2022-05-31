@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemakademik.FXMLDataViewController">
+   <children>
+      <TableView fx:id="tblMahasiswa" layoutX="14.0" layoutY="57.0" prefHeight="497.0" prefWidth="809.0">
+        <columns>
+          <TableColumn fx:id="colNPM" prefWidth="87.0" text="NPM" />
+          <TableColumn fx:id="colNama" prefWidth="174.0" text="Nama" />
+            <TableColumn fx:id="colTglLahir" prefWidth="99.0" text="Tanggal Lahir" />
+            <TableColumn fx:id="colGender" minWidth="0.0" prefWidth="103.0" text="Gender" />
+            <TableColumn fx:id="colProdi" prefWidth="125.0" text="Prodi" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="6.0" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data">
+            <items>
+              <MenuItem fx:id="menuDeleteData" disable="true" mnemonicParsing="false" onAction="#deleteDataMahasiswa" text="Delete" />
+                  <MenuItem fx:id="menuAddData" mnemonicParsing="false" onAction="#viewAddDataForm" text="Tambah Data" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
